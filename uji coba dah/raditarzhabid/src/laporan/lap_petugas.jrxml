@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="11c0277a-1f07-4294-8883-5f753f4a41b4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select * from petugas]]>
+	</queryString>
+	<field name="id_petugas" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="username" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_petugas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="level" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="93" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="55461f0c-670d-4382-89ae-d97b1b9749d2" style="Title" x="197" y="38" width="263" height="33" forecolor="#999900"/>
+				<textElement verticalAlignment="Middle">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Laporan Petugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3c3df881-0f28-43d1-b5e2-dbcf571592b2" style="SubTitle" x="138" y="16" width="276" height="35" forecolor="#000000"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial Black" size="20"/>
+				</textElement>
+				<text><![CDATA[SMK TADIKA PERTIWI]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="f8826fff-a368-4935-9640-e6225a4c8942" x="45" y="6" width="79" height="75"/>
+                                <imageExpression><![CDATA["src/Img/logo SMK.jpg"]]></imageExpression>
+
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement uuid="49c4f348-1ee0-4cb2-b258-0099662e1073" positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="bab266ff-d757-4331-8a29-3787399ad584" style="Column header" x="0" y="19" width="138" height="15"/>
+				<textElement/>
+				<text><![CDATA[ID Petugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5f1f5092-ae98-418b-b969-03c0823b2b16" style="Column header" x="138" y="19" width="138" height="15"/>
+				<textElement/>
+				<text><![CDATA[Username]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="79b9c1cf-2a9b-4fb9-905d-41ff4e7fb20d" style="Column header" x="276" y="19" width="138" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nama Petugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cb16589a-8213-4841-a814-0e52a598bbe4" style="Column header" x="414" y="19" width="138" height="15"/>
+				<textElement/>
+				<text><![CDATA[Level]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<line>
+				<reportElement uuid="f697646b-1dfc-47f1-83cd-7cdfc38b2cf7" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="2e3f77f2-0968-4be7-a799-fbfbbbf90445" style="Detail" x="0" y="0" width="138" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{id_petugas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="511df10c-d9f7-42d7-9405-d3fcc9ba4283" style="Detail" x="138" y="0" width="138" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b3ee81a2-9b16-493b-ab5b-a9e9beda2b6a" style="Detail" x="276" y="0" width="138" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama_petugas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7365232f-ad02-43b8-ba11-26e3943f3f62" style="Detail" x="414" y="0" width="138" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{level}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="52" splitType="Stretch">
+			<line>
+				<reportElement uuid="b4d4762a-4c52-42c3-ae47-33ee73b35f3b" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement uuid="622ecbd3-71ed-46f5-8cca-1f03a7ab8233" style="Column header" x="433" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="77a3654f-9a62-4644-88b3-e367b064f623" style="Column header" x="433" y="0" width="40" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="00a76c7c-0120-4e25-9954-6bbfd364df18" style="Column header" x="0" y="0" width="197" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
